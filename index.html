@@ -316,10 +316,21 @@
 
 <p class="sub">
   Visitors: 
-  <span data-goatcounter-url="/" data-goatcounter-count="visits">
-    Loading...
-  </span>
+  <span id="visitor-count">Loading...</span>
 </p>
+
+<script>
+window.addEventListener("load", function () {
+  fetch("https://pattharawin.goatcounter.com/counter//.json")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("visitor-count").textContent = data.count;
+    })
+    .catch(() => {
+      document.getElementById("visitor-count").textContent = "—";
+    });
+});
+</script>
 
 <script data-goatcounter="https://pattharawin.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
