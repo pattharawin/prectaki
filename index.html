@@ -315,21 +315,14 @@
   </p>
 
 <p class="sub">
-  Visitors: 
-  <span id="visitor-count">Loading...</span>
+  Visitors: <span id="visitor-count">Loading...</span>
 </p>
 
 <script>
-window.addEventListener("load", function () {
-  fetch("https://pattharawin.goatcounter.com/counter//.json")
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById("visitor-count").textContent = data.count;
-    })
-    .catch(() => {
-      document.getElementById("visitor-count").textContent = "—";
-    });
-});
+fetch("https://pattharawin.goatcounter.com/counter//.json")
+  .then(r => r.json())
+  .then(d => document.getElementById("visitor-count").textContent = d.count)
+  .catch(() => document.getElementById("visitor-count").textContent = "—");
 </script>
 
 <script data-goatcounter="https://pattharawin.goatcounter.com/count"
