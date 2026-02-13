@@ -315,16 +315,11 @@
   </p>
 
 <p class="sub">
-  Visitors: <span id="gc-views"></span>
+  Visitors: <span data-goatcounter-url="/" data-goatcounter-count="visits">Loading...</span>
 </p>
 
-<script>
-fetch("https://pattharawin.goatcounter.com/count.json")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("gc-views").textContent = data.count;
-  });
-</script>
+<script data-goatcounter="https://pattharawin.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
