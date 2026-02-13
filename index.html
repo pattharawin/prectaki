@@ -314,5 +314,17 @@
     Disclaimer: For research and educational purposes only. Clinical decisions should be based on professional judgment.
   </p>
 
+<p class="sub">
+  Visitors: <span id="gc-views"></span>
+</p>
+
+<script>
+fetch("https://pattharawin.goatcounter.com/count.json")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("gc-views").textContent = data.count;
+  });
+</script>
+
 </body>
 </html>
