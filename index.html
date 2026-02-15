@@ -372,16 +372,11 @@
         async src="https://gc.zgo.at/count.js"></script>
 
 <script>
-  var t = setInterval(function () {
-    if (window.goatcounter && window.goatcounter.visit_count) {
-      clearInterval(t);
-      window.goatcounter.visit_count({ append: "#gc-counter", type: "html", no_branding: 1 });
-    }
-  }, 100);
+    // Append to the <body>; can use a CSS selector to append somewhere else.
+    window.goatcounter.visit_count({append: 'body'})
 </script>
-
 <script data-goatcounter="https://pattharawin.goatcounter.com/count"
-        async src="https://gc.zgo.at/count.js"></script>
+        async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
