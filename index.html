@@ -364,28 +364,14 @@
     Disclaimer: For research and educational purposes only. Clinical decisions should be based on professional judgment.
   </p>
 
-
-
+<div style="text-align: center;">
 <script>
+    // Append to the <body>; can use a CSS selector to append somewhere else.
     window.goatcounter.visit_count({append: 'body'})
 </script>
-
-<script>
-  var t = setInterval(function () {
-    if (window.goatcounter && window.goatcounter.visit_count) {
-      clearInterval(t);
-      window.goatcounter.visit_count({
-        append: "#gc-box",
-        type: "html",
-        no_branding: 1,
-        attr: {
-          width: "150",
-          height: "60"
-        }
-      });
-    }
-  }, 100);
-</script>
+<script data-goatcounter="https://pattharawin.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</div>
 
 </body>
 </html>
