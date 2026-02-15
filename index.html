@@ -368,22 +368,25 @@
   Visitors: <span id="gc-counter"></span>
 </p>
 
-<script>
-  var t = setInterval(function () {
-    if (window.goatcounter && window.goatcounter.visit_count) {
-      clearInterval(t);
-      window.goatcounter.visit_count({
-        append: "#gc-counter",
-        type: "html",
-        no_branding: 1,
-        style: "font-family:inherit;font-size:inherit;color:inherit;border:none;background:none;"
-      });
-    }
-  }, 100);
-</script>
-
 <script data-goatcounter="https://pattharawin.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
+
+<script>
+  (function () {
+    // Count for this GitHub Pages path:
+    // "/prectaki/" (or similar)
+    var path = location.pathname;
+
+    fetch("https://pattharawin.goatcounter.com/counter/" + encodeURIComponent(path) + ".json")
+      .then(r => r.json())
+      .then(d => {
+        document.getElementById("gc-views").textContent = d.count;
+      })
+      .catch(() => {
+        document.getElementById("gc-views").textContent = "—";
+      });
+  })();
+</script>
 
 </body>
 </html>
