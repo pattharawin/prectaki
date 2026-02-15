@@ -364,22 +364,16 @@
   Disclaimer: For research and educational purposes only. Clinical decisions should be based on professional judgment.
 </p>
 
-<div id="gc-box" style="display:flex; justify-content:center; margin-top:12px;"></div>
-
-<script data-goatcounter="https://pattharawin.goatcounter.com/count"
-        src="https://gc.zgo.at/count.js"></script>
-
 <script>
-  window.goatcounter.visit_count({
-    append: "#gc-box",
-    type: "html",
-    no_branding: 1,
-    attr: {
-      width: "150",
-      height: "60"
-    }
-  });
+    var t = setInterval(function() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(t)
+            window.goatcounter.visit_count({append: 'body'})
+        }
+    }, 100)
 </script>
+<script data-goatcounter="https://pattharawin.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
