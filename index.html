@@ -212,6 +212,9 @@
         <div class="logoBox" title="Thammasat University Faculty of Medicine">
           <img src="TU.png" alt="Thammasat University Faculty of Medicine logo" />
         </div>
+        <div class="logoBox" title="TUH">
+          <img src="TUH.png" alt="TUH logo" />
+        </div>
         <div class="logoBox" title="CICM">
           <img src="CICM.png" alt="CICM logo" />
         </div>
@@ -310,23 +313,60 @@
 
   <script src="script.js"></script>
 
+  
+  <div class="card" style="margin-top:14px;">
+    <h2>Definitions used in this calculator</h2>
+
+    <p class="small" style="margin-top:8px;">
+      <strong>eGFR equation:</strong> Estimated GFR was calculated using the <strong>2021 CKD-EPI creatinine equation</strong>.
+    </p>
+
+    <p class="small" style="margin-top:10px;">
+      <strong>KDIGO AKI staging (serum creatinine criteria used in this project):</strong>
+    </p>
+
+    <table aria-label="KDIGO AKI staging by serum creatinine" style="margin-top:10px;">
+      <thead>
+        <tr>
+          <th style="width:92px;">Stage</th>
+          <th>Creatinine criteria (easy summary)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label">1</td>
+          <td class="label" style="font-weight:800;">
+            Increase to <strong>1.5–1.9×</strong> baseline <em>OR</em> an absolute increase of <strong>≥0.3 mg/dL</strong> (≥26.5 μmol/L).
+          </td>
+        </tr>
+        <tr>
+          <td class="label">2</td>
+          <td class="label" style="font-weight:800;">
+            Increase to <strong>2.0–2.9×</strong> baseline.
+          </td>
+        </tr>
+        <tr>
+          <td class="label">3</td>
+          <td class="label" style="font-weight:800;">
+            Increase to <strong>≥3.0×</strong> baseline <em>OR</em> serum creatinine <strong>≥4.0 mg/dL</strong> (≥353.6 μmol/L) <em>OR</em> initiation of kidney replacement therapy.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="small" style="margin-top:12px;">
+      Feedback or report issues: <a href="mailto:kidney.bk@gmail.com">kidney.bk@gmail.com</a>
+    </p>
+  </div>
+
+
   <p class="sub" style="margin-top:20px;">
     Disclaimer: For research and educational purposes only. Clinical decisions should be based on professional judgment.
   </p>
 
-<p class="sub">
-  Visitors: <span id="visitor-count">Loading...</span>
-</p>
-
-<script>
-fetch("https://pattharawin.goatcounter.com/counter//.json")
-  .then(r => r.json())
-  .then(d => document.getElementById("visitor-count").textContent = d.count)
-  .catch(() => document.getElementById("visitor-count").textContent = "—");
-</script>
 
 <script data-goatcounter="https://pattharawin.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        async src="https://gc.zgo.at/count.js"></script>
 
 </body>
 </html>
