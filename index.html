@@ -364,28 +364,27 @@
     Disclaimer: For research and educational purposes only. Clinical decisions should be based on professional judgment.
   </p>
 
-<p class="sub">
-  Visitors: <span id="gc-counter"></span>
-</p>
 
-<script data-goatcounter="https://pattharawin.goatcounter.com/count"
-        async src="https://gc.zgo.at/count.js"></script>
 
 <script>
-  (function () {
-    // Count for this GitHub Pages path:
-    // "/prectaki/" (or similar)
-    var path = location.pathname;
+    window.goatcounter.visit_count({append: 'body'})
+</script>
 
-    fetch("https://pattharawin.goatcounter.com/counter/" + encodeURIComponent(path) + ".json")
-      .then(r => r.json())
-      .then(d => {
-        document.getElementById("gc-views").textContent = d.count;
-      })
-      .catch(() => {
-        document.getElementById("gc-views").textContent = "—";
+<script>
+  var t = setInterval(function () {
+    if (window.goatcounter && window.goatcounter.visit_count) {
+      clearInterval(t);
+      window.goatcounter.visit_count({
+        append: "#gc-box",
+        type: "html",
+        no_branding: 1,
+        attr: {
+          width: "150",
+          height: "60"
+        }
       });
-  })();
+    }
+  }, 100);
 </script>
 
 </body>
